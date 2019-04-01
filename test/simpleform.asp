@@ -1,4 +1,4 @@
 ﻿<%
-response.write(request.querystring("fname"))
-response.write(" " & request.querystring("lname"))
+fname=Request.Cookies("firstname")
+response.write("Firstname=" & fname)
 %>

@@ -6,11 +6,10 @@
 </head>
 <body>
 
-<form method="get" action="simpleform.asp">
-First Name: <input type="text" name="fname"><br>
-Last Name: <input type="text" name="lname"><br><br>
-<input type="submit" value="Submit">
-</form>
+<%
+Response.Cookies("firstname")="Alex"
+Response.Cookies("firstname").Expires=#April 2,2019#
+%>
 
 </body>
 </html>
