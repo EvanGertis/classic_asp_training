@@ -7,7 +7,11 @@
 <body>
 
 
-    <a href= "welcome.asp?fname=John&lname=Smith"> Go to Welcome Page</a>
+    <form method="post" action="welcome.asp">
+        First Name: <input type="text" name="fname" placeholder="Please enter your first name" />
+        Last Name : <input type="text" name="lname" placeholder="Please enter your last name" />
+        <input type="submit" />
+    </form>
 
 
 </body>
