@@ -6,29 +6,11 @@
 </head>
 <body>
 
-<%
-Function fib(n)
-ReDim f(n)
-Dim i
-i = 2
-f(0) = 1
-f(1) = 1
-
-     Do
-        f(i) = f(i-1) + f(i-2)
-        i = i + 1
-     Loop While n >= i
-
-fib = f(n)
-      
-End Function
-%>
-
-<%
-    response.write(fib(3))
-%>
-
-
+<form method="get" action="simpleform.asp">
+First Name: <input type="text" name="fname"><br>
+Last Name: <input type="text" name="lname"><br><br>
+<input type="submit" value="Submit">
+</form>
 
 </body>
 </html>
