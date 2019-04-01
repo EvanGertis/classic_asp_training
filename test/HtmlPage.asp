@@ -7,8 +7,19 @@
 <body>
 
 <%
-Response.Cookies("firstname")="Alex"
-Response.Cookies("firstname").Expires=#April 2,2019#
+    Dim x, y
+    for each x in Request.Cookies
+        Response.Write("<p>")
+        if Request.Cookies(x).HasKeys then
+            for each y in Request.Cookies(x)
+                Response.Write(x & ":" & y & "=" & Request.Cookies(x)(y))
+                Response.Write("<br>")
+            next
+        else
+            Response.Write(x & "=" & Request.Cookies(x) & "<br>")
+        end if
+            response.Write("</p>")
+    next
 %>
 
 </body>
