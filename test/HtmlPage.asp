@@ -7,22 +7,20 @@
 <body>
 
 <%
-Dim day
-day = "Tuesday"
-Select Case day
-    Case "Monday"
-        response.write("Take the trash out")
-    Case "Tuesday"  
-        response.write("Clean room")
-    Case "Wednesday"
-        response.write("Organize kitchen")
-    Case "Thursday"
-        response.write("Wash Car")
-    Case "Friday"
-        response.write("Relax")
-End Select
 
+Function fib(n)
+    If(n = 0) Then
+        fib = 1
+    Elseif(n = 1) Then
+        fib = 1 
+    Else
+        fib = fib(n - 1) + fib(n - 2)
+    End If
+End Function
+%>
 
+<%
+    response.write(fib(23))
 %>
 
 
